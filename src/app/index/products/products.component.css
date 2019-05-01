@@ -1,0 +1,21 @@
+.btn{
+    color:"#FFFFFF";
+}
+.left {
+    float: left;
+    width: 15%;
+    height: 200%;
+    overflow: hidden;
+  }
+  .right{
+      margin-left: 10%;
+      margin-right:10%;
+  }
+  .card{
+      height: 450px;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  .card-img-top{
+      height: 40%;
+  }
+  
