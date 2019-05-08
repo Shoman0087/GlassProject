@@ -2,7 +2,7 @@
 
 /*
     Build 3D glasses.
-    spec properties: 
+    spec properties:
        * <string> envMapURL: url of the envMap
        * <string> frameMeshURL: url of the mesh used for the glasses frames
        * <string> lensesMeshURL: url of the mesh of the lenses
@@ -11,7 +11,7 @@
 
 const JeelizThreeGlassesCreator=function(spec){
     const threeGlasses=new THREE.Object3D();
-    
+
     //enMap texture
     const textureEquirec = new THREE.TextureLoader().load( spec.envMapURL );
     textureEquirec.mapping = THREE.EquirectangularReflectionMapping;
@@ -37,8 +37,8 @@ const JeelizThreeGlassesCreator=function(spec){
         //tweak fragment shader to apply transparency at the end of the branches
         var fragmentShaderSource="uniform vec2 uBranchFading;\n varying float vPosZ;\n"+THREE.ShaderLib.basic.fragmentShader;
         /*
-        to add color just put 
-        gl_FragColor = vec4(0.6, 0.4, 0.2, 1.0); 
+        to add color just put
+        gl_FragColor = vec4(0.6, 0.4, 0.2, 1.0);
         in GLSL
         */
         const GLSLcomputeAlpha = 'gl_FragColor.a=smoothstep(uBranchFading.x-uBranchFading.y*0.5, uBranchFading.x+uBranchFading.y*0.5, vPosZ*0.9);'
@@ -70,7 +70,7 @@ const JeelizThreeGlassesCreator=function(spec){
         const mat=new THREE.MeshBasicMaterial({
             envMap: textureEquirec,
             opacity: 0.7,
-            color: 0x3399ff,
+            color: 0xfff,
             transparent: true
         });
         window.mat=mat;
@@ -79,7 +79,7 @@ const JeelizThreeGlassesCreator=function(spec){
     });
 
     const occluderMesh = THREE.JeelizHelper.create_threejsOccluder(spec.occluderURL);
-    
+
     return {
         glasses: threeGlasses,
         occluder: occluderMesh

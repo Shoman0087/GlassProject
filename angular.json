@@ -28,7 +28,6 @@
               "./node_modules/primeng/resources/themes/nova-light/theme.css",
               "./node_modules/primeng/resources/primeng.min.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
-
             ],
             "scripts": [
               "FILE/FILE/dist/jeelizFaceFilter.js",
@@ -36,8 +35,7 @@
               "FILE/FILE/helpers/JeelizThreejsHelper.js",
               "FILE/FILE/helpers/JeelizResizer.js",
               "FILE/FILE/demos/threejs/VTO/JeelizThreeGlassesCreator.js",
-              "FILE/FILE/demos/threejs/VTO/demo.js",
-              "FILE/FILE/demos/appearance/widget.js"
+              "FILE/FILE/demos/threejs/VTO/demo.js"
             ],
             "es5BrowserSupport": true
 
@@ -99,7 +97,7 @@
               "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": [
-              
+
             ],
             "assets": [
               "src/favicon.ico",

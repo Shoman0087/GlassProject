@@ -17,10 +17,10 @@ function init_threeScene(spec) {
 
     // CREATE THE GLASSES AND ADD THEM
     const r=JeelizThreeGlassesCreator({
-        envMapURL: "envMap.jpg",
-        frameMeshURL: "models3D/2.json",
-        lensesMeshURL: "models3D/glassesLenses.json",
-        occluderURL: "models3D/face.json"
+        envMapURL: "./assets/envMap.jpg",
+        frameMeshURL: "./assets/models3D/1.json",
+        lensesMeshURL: "./assets/models3D/glassesLenses.json",
+        occluderURL: "./assets/models3D/face.json"
     });
 
     threeStuffs.faceObject.add(r.occluder);
@@ -56,7 +56,7 @@ function init_faceFilter(videoSettings){
     JEEFACEFILTERAPI.init({
         followZRot: true,
         canvasId: 'jeeFaceFilterCanvas',
-       // NNCpath: '../src/assets/', // root of NNC.json file
+        NNCpath: './assets/', // root of NNC.json file
         maxFacesDetected: 1,
         callbackReady: function(errCode, spec){
           if (errCode){
